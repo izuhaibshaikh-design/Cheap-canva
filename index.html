@@ -14,255 +14,10 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: #0a0a0a;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
             color: #ffffff;
             min-height: 100vh;
             overflow-x: hidden;
-            position: relative;
-        }
-
-        /* Floating Particles Background */
-        .particles-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-        }
-
-        .particle {
-            position: absolute;
-            border-radius: 50%;
-            pointer-events: none;
-            animation: float-particles infinite linear;
-        }
-
-        .particle-1 {
-            width: 4px;
-            height: 4px;
-            background: rgba(139, 92, 246, 0.8);
-            top: 10%;
-            left: 20%;
-            animation-duration: 15s;
-            animation-delay: 0s;
-        }
-
-        .particle-2 {
-            width: 6px;
-            height: 6px;
-            background: rgba(6, 182, 212, 0.6);
-            top: 30%;
-            left: 80%;
-            animation-duration: 20s;
-            animation-delay: -2s;
-        }
-
-        .particle-3 {
-            width: 3px;
-            height: 3px;
-            background: rgba(139, 92, 246, 0.5);
-            top: 60%;
-            left: 10%;
-            animation-duration: 25s;
-            animation-delay: -5s;
-        }
-
-        .particle-4 {
-            width: 8px;
-            height: 8px;
-            background: rgba(6, 182, 212, 0.4);
-            top: 80%;
-            left: 70%;
-            animation-duration: 18s;
-            animation-delay: -8s;
-        }
-
-        .particle-5 {
-            width: 5px;
-            height: 5px;
-            background: rgba(139, 92, 246, 0.7);
-            top: 15%;
-            left: 50%;
-            animation-duration: 22s;
-            animation-delay: -3s;
-        }
-
-        .particle-6 {
-            width: 2px;
-            height: 2px;
-            background: rgba(6, 182, 212, 0.8);
-            top: 45%;
-            left: 30%;
-            animation-duration: 16s;
-            animation-delay: -6s;
-        }
-
-        .particle-7 {
-            width: 7px;
-            height: 7px;
-            background: rgba(139, 92, 246, 0.3);
-            top: 70%;
-            left: 90%;
-            animation-duration: 24s;
-            animation-delay: -10s;
-        }
-
-        .particle-8 {
-            width: 4px;
-            height: 4px;
-            background: rgba(6, 182, 212, 0.6);
-            top: 25%;
-            left: 5%;
-            animation-duration: 19s;
-            animation-delay: -4s;
-        }
-
-        .particle-9 {
-            width: 6px;
-            height: 6px;
-            background: rgba(139, 92, 246, 0.4);
-            top: 55%;
-            left: 60%;
-            animation-duration: 21s;
-            animation-delay: -7s;
-        }
-
-        .particle-10 {
-            width: 3px;
-            height: 3px;
-            background: rgba(6, 182, 212, 0.7);
-            top: 85%;
-            left: 40%;
-            animation-duration: 17s;
-            animation-delay: -1s;
-        }
-
-        .particle-11 {
-            width: 5px;
-            height: 5px;
-            background: rgba(139, 92, 246, 0.6);
-            top: 5%;
-            left: 75%;
-            animation-duration: 23s;
-            animation-delay: -9s;
-        }
-
-        .particle-12 {
-            width: 4px;
-            height: 4px;
-            background: rgba(6, 182, 212, 0.5);
-            top: 40%;
-            left: 85%;
-            animation-duration: 20s;
-            animation-delay: -2s;
-        }
-
-        @keyframes float-particles {
-            0% {
-                transform: translate(0, 0) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translate(-200px, -200px) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-        /* Connecting Lines Between Particles */
-        .particle-line {
-            position: absolute;
-            height: 1px;
-            background: linear-gradient(90deg, rgba(139, 92, 246, 0.3), rgba(6, 182, 212, 0.3));
-            transform-origin: left center;
-            animation: line-pulse 3s infinite ease-in-out;
-        }
-
-        @keyframes line-pulse {
-            0%, 100% {
-                opacity: 0.3;
-                width: 0px;
-            }
-            50% {
-                opacity: 0.7;
-                width: 100px;
-            }
-        }
-
-        .line-1 {
-            top: 20%;
-            left: 25%;
-            animation-delay: 0s;
-        }
-
-        .line-2 {
-            top: 45%;
-            left: 15%;
-            animation-delay: 1s;
-        }
-
-        .line-3 {
-            top: 65%;
-            left: 70%;
-            animation-delay: 2s;
-        }
-
-        .line-4 {
-            top: 30%;
-            left: 60%;
-            animation-delay: 0.5s;
-        }
-
-        .line-5 {
-            top: 75%;
-            left: 35%;
-            animation-delay: 1.5s;
-        }
-
-        /* Enhanced glass morphism with particles background */
-        .feature-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(6, 182, 212, 0.1));
-            border-radius: 16px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: -1;
-        }
-
-        .feature-card:hover::before {
-            opacity: 1;
-        }
-
-        /* Enhanced pricing section */
-        .pricing {
-            text-align: center;
-            padding: 4rem 0;
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(10px);
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .container {
@@ -331,7 +86,18 @@
             text-align: center;
             padding: 6rem 0 4rem;
             position: relative;
-            z-index: 10;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+            pointer-events: none;
         }
 
         .hero-content {
@@ -360,32 +126,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            min-height: 1.2em;
-        }
-
-        /* Typewriter Effect */
-        .typewriter {
-            overflow: hidden;
-            white-space: nowrap;
-            animation: typing 0s steps(0, end);
-        }
-
-        .typewriter-cursor::after {
-            content: '|';
-            display: inline-block;
-            animation: blink 1s infinite;
-            color: #8B5CF6;
-            font-weight: 400;
-        }
-
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
-        }
-
-        .price-typewriter {
-            display: inline-block;
-            min-width: 200px;
         }
 
         .hero-highlight {
@@ -446,7 +186,6 @@
         .features {
             padding: 6rem 0;
             position: relative;
-            z-index: 10;
         }
 
         .features-grid {
@@ -662,28 +401,6 @@
     </style>
 </head>
 <body>
-    <!-- Floating Particles Background -->
-    <div class="particles-background">
-        <div class="particle particle-1"></div>
-        <div class="particle particle-2"></div>
-        <div class="particle particle-3"></div>
-        <div class="particle particle-4"></div>
-        <div class="particle particle-5"></div>
-        <div class="particle particle-6"></div>
-        <div class="particle particle-7"></div>
-        <div class="particle particle-8"></div>
-        <div class="particle particle-9"></div>
-        <div class="particle particle-10"></div>
-        <div class="particle particle-11"></div>
-        <div class="particle particle-12"></div>
-        
-        <div class="particle-line line-1"></div>
-        <div class="particle-line line-2"></div>
-        <div class="particle-line line-3"></div>
-        <div class="particle-line line-4"></div>
-        <div class="particle-line line-5"></div>
-    </div>
-
     <header>
         <div class="container">
             <div class="header-content">
@@ -704,7 +421,7 @@
             <div class="container">
                 <div class="hero-content">
                     <div class="price-badge">Limited Time Offer</div>
-                    <h1>Get <span class="hero-highlight typewriter-cursor" id="typewriter-main">Canva Pro</span><br>Premium Access</h1>
+                    <h1>Get <span class="hero-highlight">Canva Pro</span><br>Premium Access</h1>
                     <p>Unlock unlimited design possibilities with premium templates, stock photos, and advanced features - all for just $1</p>
                     <a href="#" class="cta-button" onclick="handlePurchase()">Get Canva Pro for $1</a>
                 </div>
@@ -734,4 +451,50 @@
         </section>
 
         <section class="pricing" id="pricing">
-            <d
+            <div class="container">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Exclusive Pricing</h2>
+                <p style="color: #a1a1aa; margin-bottom: 2rem;">Get premium features at an unbeatable price</p>
+                <div class="price-display">
+                    <span class="price-old">$14.99</span>
+                    <span class="price-new">$1.00</span>
+                </div>
+                <div class="savings">Save 93% Today!</div>
+                <div style="margin-top: 3rem;">
+                    <a href="#" class="cta-button" onclick="handlePurchase()">Claim Your $1 Access Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CanvaPro Access. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Whop Checkout Integration
+        function handlePurchase() {
+            // Your actual Whop checkout URL
+            const whopCheckoutUrl = 'https://whop.com/checkout/plan_xFVM4vo88PCdr?d2c=true';
+            
+            // Redirect to Whop checkout
+            window.open(whopCheckoutUrl, '_blank');
+        }
+
+        // Add smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
